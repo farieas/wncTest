@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tjG-x1-QlN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="WPb-1e-pgh">
+            <objects>
+                <viewController storyboardIdentifier="MTHomeViewController" id="tjG-x1-QlN" customClass="MTHomeViewController" customModule="MachineTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UMr-M6-pzU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3IS-Sh-aM7">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BAo-5K-DX6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-95-Pmy">
+                                <rect key="frame" x="20" y="49" width="374" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-TU-8OI">
+                                        <rect key="frame" x="15" y="15" width="20.5" height="20.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnm-Z3-udu">
+                                        <rect key="frame" x="50.5" y="15.5" width="52" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Xnm-Z3-udu" firstAttribute="leading" secondItem="WhL-TU-8OI" secondAttribute="trailing" constant="15" id="IUC-NY-rSn"/>
+                                    <constraint firstItem="Xnm-Z3-udu" firstAttribute="centerY" secondItem="rfx-95-Pmy" secondAttribute="centerY" id="STy-85-2Kh"/>
+                                    <constraint firstItem="WhL-TU-8OI" firstAttribute="leading" secondItem="rfx-95-Pmy" secondAttribute="leading" constant="15" id="vG9-tg-xDS"/>
+                                    <constraint firstItem="WhL-TU-8OI" firstAttribute="centerY" secondItem="rfx-95-Pmy" secondAttribute="centerY" id="xcw-4J-loB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qtv-q0-szM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3IS-Sh-aM7" firstAttribute="top" secondItem="rfx-95-Pmy" secondAttribute="bottom" constant="5" id="27X-i2-bv8"/>
+                            <constraint firstItem="rfx-95-Pmy" firstAttribute="leading" secondItem="Qtv-q0-szM" secondAttribute="leading" constant="20" id="2vK-tc-vDT"/>
+                            <constraint firstItem="Qtv-q0-szM" firstAttribute="trailing" secondItem="3IS-Sh-aM7" secondAttribute="trailing" id="3t8-0h-al4"/>
+                            <constraint firstItem="3IS-Sh-aM7" firstAttribute="leading" secondItem="Qtv-q0-szM" secondAttribute="leading" id="6OF-eO-mD5"/>
+                            <constraint firstItem="rfx-95-Pmy" firstAttribute="top" secondItem="Qtv-q0-szM" secondAttribute="top" constant="5" id="Lo4-z4-mVS"/>
+                            <constraint firstItem="Qtv-q0-szM" firstAttribute="bottom" secondItem="3IS-Sh-aM7" secondAttribute="bottom" id="YxZ-QA-2cN"/>
+                            <constraint firstItem="3IS-Sh-aM7" firstAttribute="top" secondItem="Qtv-q0-szM" secondAttribute="top" constant="60" id="aQE-4R-FBk"/>
+                            <constraint firstItem="Qtv-q0-szM" firstAttribute="trailing" secondItem="rfx-95-Pmy" secondAttribute="trailing" constant="20" id="dTc-iX-GhU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="3IS-Sh-aM7" id="Knl-OB-Iln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhP-2g-Dpk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466.66666666666669" y="-32.142857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search" width="20.5" height="20.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

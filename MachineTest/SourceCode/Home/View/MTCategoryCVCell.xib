@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MTCategoryCVCell" customModule="MachineTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKw-fu-ouL">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OXw-7U-vwd">
+                                <rect key="frame" x="15" y="16" width="70" height="67.5"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OXw-7U-vwd" secondAttribute="height" id="XgA-Zv-6ae"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.60799998044967651" blue="0.23100000619888306" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GKw-fu-ouL" secondAttribute="height" id="BxM-uh-19y"/>
+                            <constraint firstItem="OXw-7U-vwd" firstAttribute="width" secondItem="GKw-fu-ouL" secondAttribute="width" multiplier="0.7" id="Cyw-OE-ZMy"/>
+                            <constraint firstItem="OXw-7U-vwd" firstAttribute="centerX" secondItem="GKw-fu-ouL" secondAttribute="centerX" id="eWD-gE-am8"/>
+                            <constraint firstItem="OXw-7U-vwd" firstAttribute="centerY" secondItem="GKw-fu-ouL" secondAttribute="centerY" id="mv5-oX-YeD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorner" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Vegetables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNd-SM-F63">
+                        <rect key="frame" x="14" y="110" width="72.5" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="GKw-fu-ouL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4bi-fi-aNn"/>
+                <constraint firstItem="GKw-fu-ouL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IfH-1e-wV5"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wNd-SM-F63" secondAttribute="trailing" constant="5" id="P0w-xu-mKz"/>
+                <constraint firstItem="wNd-SM-F63" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="V8Q-D3-49N"/>
+                <constraint firstItem="wNd-SM-F63" firstAttribute="top" secondItem="GKw-fu-ouL" secondAttribute="bottom" constant="10" id="WIg-DI-J1d"/>
+                <constraint firstAttribute="bottom" secondItem="wNd-SM-F63" secondAttribute="bottom" constant="10" id="fMC-Sk-gra"/>
+                <constraint firstItem="wNd-SM-F63" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="n0z-hc-wsq"/>
+                <constraint firstAttribute="trailing" secondItem="GKw-fu-ouL" secondAttribute="trailing" id="puq-0x-g62"/>
+            </constraints>
+            <size key="customSize" width="122" height="107"/>
+            <connections>
+                <outlet property="imageView" destination="OXw-7U-vwd" id="2ST-HI-VtB"/>
+                <outlet property="lblName" destination="wNd-SM-F63" id="vfx-4f-Ezq"/>
+            </connections>
+            <point key="canvasLocation" x="189.85507246376812" y="112.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <namedColor name="AccentColor">
+            <color red="0.097999997437000275" green="0.60799998044967651" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
