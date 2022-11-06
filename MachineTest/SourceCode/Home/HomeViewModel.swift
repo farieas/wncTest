@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+typealias UpdateData = (() -> Void)
 class HomeViewModel {
     
     let apiService = Network.shared
     private var home : Home?
     
-    var updateData : (() -> Void) = { }
+    var updateData : UpdateData = { }
     var numberOfSection : Int { self.home?.homeData?.count ?? 0 }
   
     
